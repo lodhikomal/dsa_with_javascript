@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let arr = [2, 5, 45, 67, 76, 0, 8, 7, 4, 3];
+      function getvalue() {
+        let data = document.getElementById("element").value;
+        if (
+          data < arr.length &&
+          typeof parseInt(data) == "number" &&
+          !data === 0
+        ) {
+          alert(arr[data], "array value=");
+        } else {
+          alert("please enter valid input");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getvalue()">click me</button>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function increment(x) {
+            console.log(x)
+            if (x < 10) {
+                increment(x + 1)
+            }
+        }
+        var temp = 0
+        increment(temp)
+
+
+        //factorial of a number
+        let data = 5;
+        function factorial(value) {
+            console.log(value, "sdf")
+            console.log(value * (value - 1), "fdtft")
+
+            if (value == 0 || value == 1) {
+                return 1
+
+            } else {
+
+                return value * factorial(value - 1)
+            }
+
+        }
+
+        console.log(factorial(5))
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

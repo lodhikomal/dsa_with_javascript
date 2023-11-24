@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arr = [2, 4, 6, 8];
+      let arr1 = [3, 5, 7, 9, 1, 9];
+      let arr2 = [];
+      let a = 0,
+        a1 = 0,
+        a2 = 0;
+      while (a < arr.length && a1 < arr1.length) {
+        if (arr[a] < arr1[a1]) {
+          arr2[a2] = arr[a];
+          a++;
+          console.log(arr2[a2], "first");
+        } else {
+          arr2[a2] = arr1[a1];
+          a1++;
+          console.log(arr2[a2], "ff");
+        }
+        a2++;
+      }
+      while (a1 < arr1.length) {
+        arr2[a2] = arr1[a1];
+        a1++;
+        a2++;
+      }
+      console.log(arr2, "dasd");
+    </script>
+  </head>
+  <body></body>
+</html>

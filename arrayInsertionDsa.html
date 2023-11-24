@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arr = [2, 5, 45, 67, 76, 0, 8, 7, 4, 3];
+      document.write("given array=", arr + "<br>");
+      let num = 50;
+      let position = 1;
+      function getvalue() {
+        let num = document.getElementById("number").value;
+        let position = document.getElementById("position").value;
+        for (let i = arr.length - 1; i >= 0; i--) {
+          console.log(arr[i]);
+          if (i >= position) {
+            arr[i + 1] = arr[i];
+            if (i == position) {
+              arr[i] = num;
+              document.write("modify array=", arr);
+            }
+            console.log(arr, "dgc");
+          }
+        }
+      }
+
+      //using slice method
+      // arr.splice(5, 0, 9000);
+      // console.log(arr, "check");
+    </script>
+  </head>
+  <body>
+    <input type="text" id="number" placeholder="enter no to be insert" />
+    <input type="text" id="position" placeholder="enter position" />
+    <button onclick="getvalue()">Insert</button>
+  </body>
+</html>

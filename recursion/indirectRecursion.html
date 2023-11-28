@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<script>
-    let apple = 0, money = 100;
+  </head>
+  <script>
+    let totalApple = 0,
+      money = 100;
     function buyApple(x) {
-        if (x > 0) {
-            buyAppleMore(x)
-            console.log("money", x)
-        }
-
-        // console.log(x)
-
+      //   console.log(x, "money");
+      if (x > 0) {
+        buyMoreApple(x);
+        console.log("i have", x, "rs", totalApple, "apple");
+      } else {
+        console.log("i dont have money");
+      }
     }
-    buyApple(apple)
 
-    function buyAppleMore(x) {
-        x++;
-        x = x - 10;
-        buyApple(x)
-        console.log("total apple", x)
-
+    function buyMoreApple(x) {
+      totalApple++;
+      buyApple(x - 10);
     }
-    buyAppleMore(money)
-</script>
+    buyApple(money);
+  </script>
 
-<body>
-
-</body>
-
+  <body></body>
 </html>

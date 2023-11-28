@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [];
+      let max = 5;
+      let currentSize = data.length;
+
+      function push() {
+        let newValue = document.getElementById("newVal").value;
+        // console.log(newValue, "check");
+
+        if (currentSize >= max) {
+          alert("stack is full" + newValue);
+        } else {
+          data[currentSize] = newValue;
+          currentSize += 1;
+          console.log("item added");
+        }
+      }
+      function pop() {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("stack is alredy empty");
+        }
+      }
+      function display() {
+        for (let i = 0; i <= currentSize - 1; i++) {
+          console.log(data, "check");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter element" id="newVal" />
+    <button onclick="push()">Add element</button>
+    <button onclick="pop()">Remove element</button>
+    <button onclick="display()">Display element</button>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [];
+      let max = 5;
+      let currentSize = data.length;
+
+      function push(val) {
+        if (currentSize >= max) {
+          alert("stack is full" + val);
+        }
+        data[currentSize] = val;
+        currentSize += 1;
+      }
+      function pop() {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("stack is alredy empty");
+        }
+      }
+      push(30);
+      push(20);
+      push(40);
+      pop();
+      pop();
+      pop();
+      pop();
+      //   push(50);
+      //   push(60);
+      //   push(70);
+
+      console.log(data, "ada");
+    </script>
+  </head>
+  <body></body>
+</html>
